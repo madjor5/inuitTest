@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    
+    <title></title>
+    
+    <link rel="stylesheet" href="/frontend/css/default.css">
+  </head>
+  <body>
+
+      <header>
+        <div class="grid">
+          <div class="grid__item one-whole">
+            <h1>Just trying out all different styles from Inuit.css</h1>
+            <p>It's a question of knowing them all</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- main structure -->
+      <div class="grid">
+        <div class="grid__item one-quarter palm-one-whole">
+          <ul>
+            <li><a href="#code">Code</a></li>
+            <li><a href="#forms">Forms</a></li>
+          </ul>
+        </div><!--
+        --><div class="grid__item three-quarters palm-one-whole">
+          
+          <section id="code">
+            <h2>Code examples</h2>
+            <div class="grid">
+              <div class="grid__item one-half palm-one-whole">
+                <h3>Ordinary code block</h3>
+<pre><code>
+<span class="code-comment">//This is a comment</span>
+function Panel(element, canClose, closeHandler) {
+  this.element = element;
+  this.canClose = canClose;
+  this.closeHandler = function () { if (closeHandler) closeHandler() };
+}
+</code></pre>
+              </div><!--
+              --><div class="grid__item one-half palm-one-whole">
+                <h3>Page numbered codeblock</h3>
+                 <ol class=line-numbers>
+                  <li><code>.nav{</code></li>
+                  <li><code>  list-style:none;</code></li>
+                  <li><code>  margin-left:0;</code></li>
+                  <li><code>}</code></li>
+                  <li><code>.nav > li,</code></li>
+                  <li><code>.nav > li > a{</code></li>
+                  <li><code>  display:inline-block;</code></li>
+                  <li><code>  *display:inline-block;</code></li>
+                  <li><code>  zoom:1;</code></li>
+                  <li><code>}</code></li>
+                </ol>
+              </div>
+            </div>
+            <a href="#">To the top</a>
+          </section>
+
+          <section id="forms">
+            <h2>Forms</h2>
+            <div class="grid">
+              <div class="grid__item one-half palm-one-whole">
+                <fieldset>
+                  <legend>The use of a fieldset</legend>
+                  <input type="text" class="text-input one-whole" />
+                  <textarea class="text-input one-whole"></textarea>
+                  <input type="submit" />
+
+                  <p>As you see, no particular design of forms</p>
+                </fieldset>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      
+
+  </body>
+</html>
