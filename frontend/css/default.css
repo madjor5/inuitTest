@@ -748,7 +748,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after {
+.cf:after, .matrix:after, .multi-list:after {
   content: "";
   display: table;
   clear: both; }
@@ -1560,6 +1560,112 @@ label,
   width: 100%;
   padding-left: 24px;
   vertical-align: top; }
+
+/*------------------------------------*\
+    $BLOCK-LIST
+\*------------------------------------*/
+/**
+ * Create big blocky lists of content, e.g.:
+ *
+   <ul class=block-list>
+      <li>Foo</li>
+      <li>Bar</li>
+      <li>Baz</li>
+      <li><a href=# class=block-list__link>Foo Bar Baz</a></li>
+   </ul>
+ *
+ * Extend this object in your theme stylesheet.
+ *
+ * Demo: jsfiddle.net/inuitcss/hR57q
+ *
+ */
+.block-list, .matrix,
+.block-list > li,
+.matrix > li {
+  border: 0 solid #cccccc; }
+
+.block-list, .matrix {
+  list-style: none;
+  margin-left: 0;
+  border-top-width: 1px; }
+  .block-list > li, .matrix > li {
+    border-bottom-width: 1px;
+    padding: 12px; }
+
+.block-list__link, .matrix__link {
+  display: block;
+  padding: 12px;
+  margin: -12px; }
+
+/*------------------------------------*\
+    $MATRIX
+\*------------------------------------*/
+/**
+ * Create a grid of items out of a single list, e.g.:
+ *
+   <ul class="matrix  three-cols">
+       <li class=all-cols>Lorem</li>
+       <li>Ipsum <a href=#>dolor</a></li>
+       <li><a href=# class=matrix__link>Sit</a></li>
+       <li>Amet</li>
+       <li class=all-cols>Consectetuer</li>
+   </ul>
+ *
+ * Extend this object in your theme stylesheet.
+ *
+ * Demo: jsfiddle.net/inuitcss/Y2zrU
+ *
+ */
+.matrix {
+  border-left-width: 1px; }
+  .matrix > li {
+    float: left;
+    border-right-width: 1px; }
+
+/**
+ * The `.multi-list` object is a lot like the `.matrix` object only without the
+ * blocky borders and padding.
+ *
+   <ul class="multi-list  four-cols">
+       <li>Lorem</li>
+       <li>Ipsum</li>
+       <li>Dolor</li>
+       <li>Sit</li>
+   </ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Y2zrU
+ *
+ */
+.multi-list {
+  list-style: none;
+  margin-left: 0; }
+
+.multi-list > li {
+  float: left; }
+
+/**
+ * Apply these classes alongside the `.matrix` or `.multi-list` classes on
+ * lists to determine how wide their columns are.
+ */
+.two-cols > li {
+  width: 50%; }
+
+.three-cols > li {
+  width: 33.333%; }
+
+.four-cols > li {
+  width: 25%; }
+
+.five-cols > li {
+  width: 20%; }
+
+/**
+ * Unfortunately we have to qualify this selector in order to bring its
+ * specificity above the `.[number]-cols > li` selectors above.
+ */
+.matrix > .all-cols,
+.multi-list > .all-cols {
+  width: 100%; }
 
 /**
  * Style trumps; helper and brand classes

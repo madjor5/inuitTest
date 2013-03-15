@@ -25,6 +25,11 @@
           <ul>
             <li><a href="#code">Code</a></li>
             <li><a href="#forms">Forms</a></li>
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#paragraph">Paragraph</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+            <li><a href="#tables">Tables</a></li>
           </ul>
         </div><!--
         --><div class="grid__item three-quarters palm-one-whole">
@@ -74,8 +79,190 @@ function Panel(element, canClose, closeHandler) {
 
                   <p>As you see, no particular design of forms</p>
                 </fieldset>
+              </div><!--
+              --><div class="grid__item one-half palm-one-whole">
+                <fieldset>
+                  <legend>Groping form fields</legend>
+                  <ul class=form-fields>
+                    <li>
+                      <label>John1</label>
+                      <input type="text" name="p" />
+                    </li>
+                    <li>
+                      <label>John2</label>
+                      <select name="s">
+                        <option>john</option>
+                      </select>
+                    </li>
+                    <li>
+                      <span class="label">Select an option below: <small class="additional">(multi-list class referenced to matrix)</small></span>
+                      <ul class="multi-list  four-cols">
+                        <li>
+                          <input type="radio" value="1" name="john" /> <label>John</label>
+                        </li>
+                        <li>
+                          <input type="radio" value="2" name="john" /> <label>John</label>
+                        </li>
+                        <li>
+                          <input type="radio" value="3" name="john" /> <label>John</label>
+                        </li>
+                        <li>
+                          <input type="radio" value="4" name="john" /> <label>John</label>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="label">Checkbox list</span>
+                      <ul class=check-list>
+                        <li>
+                          <input type="checkbox" name="a" /> <label>blah</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="b" /> <label>blah 2</label>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="spoken-form">
+                      <span class="label">Spoken form labels</span>
+                      Hello, my <label for="spoken-name">name</label> is
+                      <input type="text" class="text-input" "id"=spoken-name>. My home
+                      <label for="country">country</label> is
+                      <select id="country">
+                        <option>UK</option>
+                        <option>US</option>
+                        <option>Other</option>
+                      </select>
+                    </li>
+                    <li>
+                      <span class="label">Extra help stuff</span>
+                      <label for=email>Email:</label>
+                      <input type=email class="text-input" id="email">
+                      <small class="extra-help">.edu emails only</small>
+                    </li>
+                  </ul>
+                </fieldset>
               </div>
             </div>
+          </section>
+
+          <section id="headings">
+            <h2>Headings</h2>
+            <div class="grid">
+              <div class="grid__item one-half palm-one-whole">
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+              </div><!--
+              --><div class="grid__item one-half palm-one-whole">
+                <h2>Using heading groups</h2>
+                <hgroup>
+                  <h1 class=hN>inuit.css</h1>
+                  <h2 class=hN>Best. Framework. Ever!</h2>
+                </hgroup>
+              </div>
+            </div>
+          </section>
+
+          <section id="images">
+            <h2>Images</h2>
+            <div class="grid">
+              <div class="grid__item one-whole">
+                <p>Images are responsive, unless attributes height or with are set, this is default</p>
+                <img src="http://www.placecage.com/600/200" />
+                <p>Rounded corners</p>
+                <img src="http://www.placecage.com/60/60" class="img--round" />
+                <p>Right, left, center</p>
+                <p>
+                  <img src="http://www.placecage.com/100/60" class="img--round img--left" />
+                  <img src="http://www.placecage.com/100/60" class="img--round img--right" />
+                  <img src="http://www.placecage.com/100/60" class="img--round img--center" />
+                </p>
+                <p>Inline images and sizes</p>
+                <p>
+                  <img src="http://www.placecage.com/500/500" class="img--round img--short" />
+                  <img src="http://www.placecage.com/500/500" class="img--round img--medium" />
+                  <img src="http://www.placecage.com/500/500" class="img--round img--tall" />
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="paragraph">
+            <h2>Paragraphs</h2>
+            <p class="lede">Manchet tekst</p>
+            <p>normal tekst</p>
+          </section>
+
+          <section id="quotes">
+            <h2>Quotes</h2>
+            <div class="grid">
+              <div class="grid__item one-half palm-one-whole">
+                <p>This is an <q>inline quote</q></p>
+                  <blockquote>
+                    <p>Insanity: doing the same thing over and over again and expecting
+                    different results.</p>
+                    <b class=source>Albert Einstein</b>
+                  </blockquote>
+              </div>
+            </div>
+          </section>
+
+          <section id="tables">
+            <h2>Tables</h2>
+            <p>.table--bordered, .table--striped, .table--data</p>
+            <p>Læg mærke til colgroup setuppet i koden</p>
+            <table class="table--bordered table--striped table--data">
+              <colgroup>
+                <col class="t10">
+                <col class="t10">
+                <col class="t10">
+                <col>
+              </colgroup>
+            <thead>
+            <tr>
+            <th colspan=3>Foo</th>
+            <th>Bar</th>
+            </tr>
+            <tr>
+            <th>Lorem</th>
+            <th>Ipsum</th>
+            <th class=numerical>Dolor</th>
+            <th>Sit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <th rowspan=3>Sit</th>
+            <td>Dolor</td>
+            <td class=numerical>03.788</td>
+            <td>Lorem</td>
+            </tr>
+            <tr>
+            <td>Dolor</td>
+            <td class=numerical>32.210</td>
+            <td>Lorem</td>
+            </tr>
+            <tr>
+            <td>Dolor</td>
+            <td class=numerical>47.797</td>
+            <td>Lorem</td>
+            </tr>
+            <tr>
+            <th rowspan=2>Sit</th>
+            <td>Dolor</td>
+            <td class=numerical>09.640</td>
+            <td>Lorem</td>
+            </tr>
+            <tr>
+            <td>Dolor</td>
+            <td class=numerical>12.117</td>
+            <td>Lorem</td>
+            </tr>
+            </tbody>
+            </table>
           </section>
 
         </div>
